@@ -17,3 +17,4 @@ def isUnique(arr):
 
 val = ['a','b','c','d']
 print(isUnique(val))
+             
