@@ -15,6 +15,6 @@ def isUnique(arr):
 	return result			
 
 
-val = ['a','b','b','d']
+val = [1,2,1,4]
 print(isUnique(val))
              
