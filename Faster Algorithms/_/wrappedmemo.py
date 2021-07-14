@@ -17,10 +17,6 @@ def outer(n):
 	
 	return quick
 
-
-
-
-
 for i in range(0,33000,299):
 
 	myFunc = outer(3)
