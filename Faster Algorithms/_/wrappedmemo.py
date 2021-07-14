@@ -1,22 +1,30 @@
 from collections import defaultdict
 import sys,time
 
-cache = defaultdict()
-
 def multiply(n):
-	return (n**n)
+	return (n*10)
 
-def quick(n):
-	if n not in cache:
-		#print("MISS")
-		result = multiply(n)
-		cache[n] = result		
-		return result
-	else:
-		return cache[n]
+def outer(n):
+	cache = defaultdict()	
+	def quick():				
+		if n not in cache:
+			print("MISS")
+			result = multiply(n)
+			cache[n] = result		
+			return result
+		else:
+			return cache[n]
+	
+	return quick
+
+
+
+
 
 for i in range(0,33000,299):
-	print(quick(i)%25)
+
+	myFunc = outer(3)
+	print(myFunc())
 
 print("DONE CACHING")
 time.sleep(2)
