@@ -1,10 +1,9 @@
-from collections import defaultdict
-import sys,time
+import sys,time,collections,itertools
+
 def def_value():
     return False
     
-memo = defaultdict(def_value)
-
+memo = collections.defaultdict(def_value)
 tracker = 0
 
 def factorial(n):
@@ -15,3 +14,6 @@ def factorial(n):
 
 print(factorial(5))
 
+arr = ['A','B','C']
+x = list(itertools.accumulate(arr))
+print(x)
